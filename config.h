@@ -11,11 +11,11 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
-static char dmenufont[]             = "monospace:size=10";
-static char normbgcolor[]           = "#222222";
+static const char *fonts[]          = { "Tamzen:size=11", "JoyPixels:pixelsize=10:antialias=true:autohint=true"  };
+static char dmenufont[]             = "Tamzen:size=11";
+static char normbgcolor[]           = "#060606";
 static char normbordercolor[]       = "#444444";
-static char normfgcolor[]           = "#bbbbbb";
+static char normfgcolor[]           = "#141414";
 static char selfgcolor[]            = "#eeeeee";
 static char selbordercolor[]        = "#770000";
 static char selbgcolor[]            = "#005577";
@@ -42,7 +42,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "一", "二", "三", "四", "五", "六", "七", "八", "九" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -140,10 +140,11 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_Tab,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_q,		killclient,	{0} },
 	{ MODKEY|ShiftMask,		XK_q,		spawn,		SHCMD("sysact") },
-	{ MODKEY,			XK_w,		spawn,		SHCMD("waterfox-current") },
-	{ MODKEY|ShiftMask,			XK_d,		spawn,		SHCMD("discord-canary") },
-	{ MODKEY|ShiftMask,			XK_s,		spawn,		SHCMD("slack") },
-	{ MODKEY|ShiftMask,			XK_k,		spawn,		SHCMD("flameshot gui") },
+	{ MODKEY,			XK_w,		spawn,		SHCMD("waterfox-g3") },
+	{ MODKEY,			XK_d,		spawn,		SHCMD("lightcord") },
+	{ MODKEY,			XK_s,		spawn,		SHCMD("slack") },
+	{ MODKEY,			XK_k,		spawn,		SHCMD("flameshot gui") },
+	{ MODKEY,			XK_m,		spawn,		SHCMD("rofi -show drun") },
 	{ MODKEY,			XK_t,		setlayout,	{.v = &layouts[0]} }, /* tile */
 	{ MODKEY|ShiftMask,		XK_t,		setlayout,	{.v = &layouts[1]} }, /* bstack */
 	{ MODKEY,			XK_y,		setlayout,	{.v = &layouts[2]} }, /* spiral */
